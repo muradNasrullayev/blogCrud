@@ -11,7 +11,7 @@
 
         <div class="col-12">
             <label for="title" class="form-label">Başlıq</label>
-            <input type="text" name="title" id="title"
+            <input type="text" name="title" value="{{ old('title') }}" id="title"
                    class="form-control @error('title') is-invalid @enderror"
                    value="{{ old('title') }}">
             @error('title')
