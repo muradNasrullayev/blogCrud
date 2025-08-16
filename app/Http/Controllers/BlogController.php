@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use App\Http\Requests\StoreRequest;
-use App\Http\Requests\UpdateRequest;
+use App\Http\Requests\Blogs\StoreRequest;
+use App\Http\Requests\Blogs\UpdateRequest;
 
 class BlogController extends Controller
 {
