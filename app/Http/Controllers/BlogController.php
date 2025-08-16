@@ -46,6 +46,7 @@ class BlogController extends Controller
      */
     public function store(StoreRequest $request)
     {
+        
         $data = [
             'title' => $request->get('title'),
             'description' => $request->get('description'),

@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="d-flex justify-content-between mb-3">
-        <h2>Blog Siyahısı</h2>
-        <a href="{{ route('blogs.create') }}" class="btn btn-success">+ Yeni Blog</a>
+        <h2>Blog list</h2>
+        <a href="{{ route('blogs.create') }}" class="btn btn-success">+ New blog</a>
     </div>
 
     {{-- Search və Date Filter --}}
@@ -29,7 +29,7 @@
         <tr>
             <th>#</th>
             <th>Title</th>
-            <th width="200">Əməliyyatlar</th>
+            <th width="200">operations</th>
         </tr>
         </thead>
         <tbody>
@@ -50,7 +50,7 @@
             </tr>
         @empty
             <tr>
-                <td colspan="5" class="text-center text-muted">Heç bir blog tapılmadı</td>
+                <td colspan="5" class="text-center text-muted">Blog not foung</td>
             </tr>
         @endforelse
         </tbody>

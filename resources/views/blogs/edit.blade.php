@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="d-flex justify-content-between mb-3">
-        <h2>Blog-u Redaktə Et</h2>
-        <a href="{{ route('blogs.index') }}" class="btn btn-secondary">← Geri Qayıt</a>
+        <h2>Edit blog</h2>
+        <a href="{{ route('blogs.index') }}" class="btn btn-secondary">← Go back</a>
     </div>
 
     <form action="{{ route('blogs.update', $blog->id) }}" method="POST" enctype="multipart/form-data" class="row g-3">
@@ -11,7 +11,7 @@
         @method('PUT')
 
         <div class="col-12">
-            <label for="title" class="form-label">Başlıq</label>
+            <label for="title" class="form-label">Title</label>
             <input type="text" name="title" id="title"
                    class="form-control @error('title') is-invalid @enderror"
                    value="{{ old('title', $blog->title) }}">
@@ -21,7 +21,7 @@
         </div>
 
         <div class="col-12">
-            <label for="description" class="form-label">Açıqlama</label>
+            <label for="description" class="form-label">Description</label>
             <textarea name="description" id="description" rows="5"
                       class="form-control @error('description') is-invalid @enderror">{{ old('description', $blog->description) }}</textarea>
             @error('description')
@@ -30,7 +30,7 @@
         </div>
 
         <div class="col-12">
-            <label for="image" class="form-label">Şəkil</label>
+            <label for="image" class="form-label">Image</label>
             <input type="file" name="image" id="image"
                    class="form-control @error('image') is-invalid @enderror">
             @error('image')
@@ -39,7 +39,7 @@
 
             @if($blog->image)
                 <div class="mt-2">
-                    <strong>Mövcud Şəkil:</strong><br>
+                    <strong>Current image</strong><br>
                     <img src="{{ asset('storage/' . $blog->image) }}"
                          alt="Current Image" class="img-fluid rounded shadow-sm mt-2" style="max-width: 200px;">
                 </div>
@@ -47,7 +47,7 @@
         </div>
 
         <div class="col-12">
-            <button type="submit" class="btn btn-primary">Yenilə</button>
+            <button type="submit" class="btn btn-primary">Update</button>
         </div>
     </form>
 @endsection

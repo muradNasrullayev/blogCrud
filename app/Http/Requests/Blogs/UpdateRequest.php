@@ -22,8 +22,8 @@ class UpdateRequest extends FormRequest
     public function rules(): array
 {
     return [
-        'title'       => 'required|string|max:25',
-        'description' => 'required|string|max:100',
+        'title'       => 'required|string|max:256',
+        'description' => 'required|string|max:65000',
         'image'       => 'nullable|image',   
     ];
 }
@@ -32,9 +32,13 @@ public function messages()
     {
         return [
             'title.required'       => 'Title boş ola bilməz.',
-            'title.max'            => 'Title maksimum 25 simvol ola bilər.',
+            'title.max'            => 'Title maksimum 256 simvol ola bilər.',
             'description.required' => 'Description boş ola bilməz.',
-            'description.max'      => 'Title maksimum 100 simvol ola bilər.',
+            'description.max'      => 'Title maksimum 65000 simvol ola bilər.',
+            'image.required'       => 'Şəkil seçilməlidir.',
+            'image.image'          => 'Yüklədiyiniz fayl şəkil formatında olmalıdır.',
+            'image.mimes'          => 'Şəkil yalnız jpeg, png, jpg formatında ola bilər.',
+            'image.max'            => 'Şəkil maksimum 10 MB ola bilər.',
         ];
     }
 
