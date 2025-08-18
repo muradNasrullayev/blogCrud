@@ -6,20 +6,20 @@
     </div>
 
     <div class="mb-3">
-        <strong>Description:</strong>
+        <strong>Məzmun:</strong>
         <p class="mt-2">{{ $blog->description }}</p>
     </div>
 
     @if($blog->image)
         <div class="mb-3">
-            <strong>Image:</strong><br>
+            <strong>Şəkil:</strong><br>
             <img src="{{ asset('storage/' . $blog->image) }}"
                  alt="Blog Image" class="img-fluid rounded shadow-sm mt-2" style="max-width: 400px;">
         </div>
     @endif
 
     <div class="mt-4">
-        <a href="{{ route('blogs.index') }}" class="btn btn-secondary">← Go back</a>
-        <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-warning">Edit</a>
+        <a href="{{ route('blogs.index') }}" class="btn btn-secondary">← Geri</a>
+        <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-warning">Düzəliş et</a>
     </div>
 @endsection
