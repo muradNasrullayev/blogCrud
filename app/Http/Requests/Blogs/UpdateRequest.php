@@ -31,10 +31,10 @@ class UpdateRequest extends FormRequest
 public function messages()
     {
         return [
-            'title.required'       => 'Title boş ola bilməz.',
-            'title.max'            => 'Title maksimum 256 simvol ola bilər.',
-            'description.required' => 'Description boş ola bilməz.',
-            'description.max'      => 'Title maksimum 65000 simvol ola bilər.',
+            'title.required'       => 'Başlıq boş ola bilməz.',
+            'title.max'            => 'Başlıq maksimum 256 simvol ola bilər.',
+            'description.required' => 'Məzmun boş ola bilməz.',
+            'description.max'      => 'Məzmun maksimum 65000 simvol ola bilər.',
             'image.required'       => 'Şəkil seçilməlidir.',
             'image.image'          => 'Yüklədiyiniz fayl şəkil formatında olmalıdır.',
             'image.mimes'          => 'Şəkil yalnız jpeg, png, jpg formatında ola bilər.',
